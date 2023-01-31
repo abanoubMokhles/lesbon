@@ -26,26 +26,27 @@ body {
 }
 
 .container {
-  width: 960px;
+  max-width: 96rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 header,
 section {
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
 }
 
 h2 {
   font-size: 3.6rem;
   letter-spacing: -0.2px;
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
   color: #343a40;
 }
 
 .grid-3-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 80px;
+  column-gap: 8rem;
 }
 .btn {
   display: inline-block;
@@ -74,8 +75,8 @@ h2 {
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 80px;
-  margin-top: 48px;
+  column-gap: 8rem;
+  margin-top: 4.8rem;
   padding: 6.4rem 0;
 }
 /* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
@@ -149,7 +150,7 @@ img {
   font-size: 1.6rem;
   line-height: 1.7;
   font-style: italic;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
   color: #f8f9fa;
 }
 .testimonial-author {
@@ -161,18 +162,18 @@ img {
   padding: 6.4rem 0;
 }
 .chair-box {
-  padding: 24px;
+  padding: 2.4rem;
 }
 /* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 h3 {
   font-size: 2rem;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
   color: #343a40;
 }
 .chair-details {
   list-style: none;
   font-size: 1.6rem;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 .chair {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -186,8 +187,8 @@ h3 {
 .chair-details li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
   color: #495057;
 }
 
@@ -210,7 +211,47 @@ h3 {
 }
 
 footer {
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
   color: #495057;
   text-align: center;
+}
+
+/* Responsive Design Rules */
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* HEADER */
+  header {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+    justify-items: center;
+    text-align: center;
+  }
+  header img {
+    width: 70%;
+  }
+  .grid-3-cols {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 6rem;
+  }
+  .testi-img {
+    width: 100%;
+  }
+  .testimonial-box {
+    grid-column: 1 / -1;
+    align-self: center;
+  }
+  .features {
+    text-align: center;
+  }
+  .features__feature {
+    width: 70%;
+  }
+  .chair {
+    width: 70%;
+  }
 }
